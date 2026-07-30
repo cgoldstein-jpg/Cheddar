@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "figma:publish": "figma connect publish"
+    "figma:publish": "figma connect publish --force"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",
