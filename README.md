@@ -1,25 +1,30 @@
 Cheddar Design System (cds)
+
 React 18.3.1+ and React 19 TypeScript/Vite component library for the Cheddar product, with Figma Code Connect wired up against the Cheddar Product Design System file.
 
 v1.4.2
 Aligns large and selected article cards, chart typography/layout, Tag, and Nav with the latest Product Design System masters.
 Removes unsupported ArticleCard eyebrows and visible Nav labels, updates Make guidance, and keeps full App Designs compositions out of the component gallery.
 Removes obsolete Tag-only Instrument Sans assets and publishes the matching Code Connect templates.
+
 v1.4.1
 Corrects package-rendered component geometry, typography, colors, and icon artwork against the selected Product Design System component masters.
 Includes the verified package fonts, tokens, Code Connect mappings, and Make guidance from the same audited revision.
+
 v1.4.0
 Aligns component geometry, spacing, color, typography, icons, and interaction states with the audited Cheddar App Designs and Product Design System.
 Keeps Brand as the semantic variable collection with only Light and Dark modes; removes the incorrect branded appearance mode from code and generated tokens.
 Adds the complete token-backed spacing scale and fixes component APIs, semantic Figma property names, variable bindings, and all 42 Code Connect mappings.
 Expands the Make Kit with eight executable screen recipes, strict design-to-code alignment guidance, packaged assets, and reference-screen regression coverage.
 Bundles and applies the official Mona Sans variable font with SS05 enabled across Figma, components, and custom Make-authored text.
+
 v1.3.0
 Makes the published package self-contained and reliable in Figma Make: components load their CSS, fonts, tokens, and stable asset URLs without consumer-side bundler workarounds.
 Supports React 18.3.1 and React 19, with a packed-package React 18 consumer test guarding the Make runtime.
 Matches the Figma library more closely across component geometry, states, theme semantics, imagery, typography, and Code Connect mappings.
 Bundles the official Mona Sans variable webfont and enables Figma's SS05 double-storey lowercase a.
 Keeps application shells and full-screen mocks out of the library. The Make Kit instead provides eight consumer-owned composition recipes for mobile and fluid full-page apps.
+
 What's in this repo
 Path	Purpose
 src/App.tsx	Dev gallery app — rendered by the Vite dev server for visual development
@@ -34,6 +39,7 @@ docs/	Parity audit and migration notes
 docs/make-kit/	Guidelines shipped to the Figma Make kit, plus the prompt that tests them
 tests/visual/	Committed Playwright regression suite and screenshot baselines
 **/*.figma.ts	Figma Code Connect mapping files
+
 Components
 Every component is exported from the package root along with its props type (import { GoalCard, type GoalCardProps } from '@screentime/cheddar-ds').
 
@@ -44,6 +50,7 @@ Navigation & overlays	Nav, PageHeader, Sheet, SectionHeader
 Content	ActivityItem, Avatar, Tag, Toast, Notification, EmptyState, Icon, Logo, Wordmark, IntroIllustration, LargeIllustration
 Cards & panels	TotalSavingsCard, GoalCard, CompletedGoalCard, ArticleCard, ActivityCard, ProfileCard, BadgeCard, AccountCard, GoalSummaryCard, SpendingChartPanel, SavingsStreak
 Theming	ThemeScope
+
 The catch-all Card, which rendered hardcoded demo content selected by variant, was removed in v1.2.2. Use the card component matching your shape; see docs/migration-1.2.md for the variant-to-component table.
 
 Demo imagery is exposed as direct static imports so the consuming bundler owns the URL:
